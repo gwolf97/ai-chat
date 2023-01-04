@@ -80,7 +80,7 @@ const handleSubmit = async (e) => {
 
   loader(messageDiv)
 
-  const response = await fetch(`https://ai-chat-8dpj.onrender.com/`, {
+  const response = await fetch(`https://ai-chat-8dpj.onrender.com`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
@@ -102,6 +102,7 @@ const handleSubmit = async (e) => {
     const err = await response.text
 
     messageDiv.innerHTML = "Something went wrong"
+    alert(err)
   }
 }
 
